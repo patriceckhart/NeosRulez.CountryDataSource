@@ -1,0 +1,18 @@
+{
+    "description": "A package that provides a data source with all countries in the world including translations and other valuable data.",
+    "type": "neos-package",
+    "name": "neosrulez/countrydatasource",
+    "require": {
+        "neos/flow": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "NeosRulez\\CountryDataSource\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "NeosRulez.CountryDataSource"
+        }
+    }
+}

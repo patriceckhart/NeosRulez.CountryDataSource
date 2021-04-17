@@ -1,0 +1,10 @@
+Neos:
+  Neos:
+    fusion:
+      autoInclude:
+        NeosRulez.CountryDataSource: true
+    userInterface:
+      translation:
+        autoInclude:
+          NeosRulez.CountryDataSource:
+            - 'NodeTypes/Mixin/*'
