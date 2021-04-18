@@ -21,25 +21,12 @@ class CountriesFusion extends AbstractFusionObject {
     {
         $exclude = $this->fusionValue('exclude');
         $include = $this->fusionValue('include');
-        $metadata = $this->countries->loadMetaData();
-        $result = $metadata;
-        if($exclude) {
-            $exclusions = explode(',', $exclude);
-            $result = [];
-            foreach ($metadata as $country) {
-                if(!in_array($country['cca2'], array_values($exclusions))) {
-                    $result[] = $country;
-                }
-            }
-        }
-        if($include) {
-            $inclusions = explode(',', $include);
-            $result = [];
-            foreach ($metadata as $country) {
-                if(in_array($country['cca2'], array_values($inclusions))) {
-                    $result[] = $country;
-                }
-            }
+        $independent = $this->fusionValue('independent');
+        $unMember = $this->fusionValue('unMember');
+        $result = [];
+        $countries = $this->countries->getCountries($exclude, $include, $independent, $unMember);
+        if($countries) {
+            $result = $countries;
         }
         return $result;
     }

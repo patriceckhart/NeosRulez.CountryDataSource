@@ -18,11 +18,15 @@ composer require neosrulez/countrydatasource
 countries = NeosRulez.CountryDataSource:Class.Countries {
     // Example: Shows everything except Aruba, Germany and Austria
     exclude = ${'AW,DE,AT'}
+    independent = 'false'
+    unMember = 'true'
 }
 
 countries2 = NeosRulez.CountryDataSource:Class.Countries {
     // Example: Only shows Austria and Germany
     include = ${'AT,DE'}
+    independent = 'false'
+    unMember = 'true'
 }
 
 renderer = afx`

@@ -1,4 +1,7 @@
 prototype(NeosRulez.CountryDataSource:Class.Countries) {
     @class = 'NeosRulez\\CountryDataSource\\Fusion\\CountriesFusion'
     exclude = false
+    include = false
+    independent = false
+    unMember = false
 }

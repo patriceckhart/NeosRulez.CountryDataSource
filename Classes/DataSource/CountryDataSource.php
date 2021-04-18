@@ -22,8 +22,10 @@ class CountryDataSource extends AbstractDataSource {
 
     /**
      * @inheritDoc
+     * @return array
      */
-    public function getData(NodeInterface $node = null, array $arguments = array()) {
+    public function getData(NodeInterface $node = null, array $arguments = array()):array
+    {
         $options = [];
         $metadata = $this->countries->loadMetaData();
         if($metadata) {
